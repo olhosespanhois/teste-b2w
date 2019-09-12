@@ -3,7 +3,10 @@ $(function() {
 	  console.log(data);
 	  var profileData = data.profile;
 	  	var imag = profileData.image;
-	  	$('#header-principal img').attr("src", profileData.image);
+	  	if(imag == 'https://github.com/b2w-marketplace/code-challenge/blob/master/files/avatar-dev.png'){
+	  		imag = 'https://raw.githubusercontent.com/b2w-marketplace/code-challenge/master/files/avatar-dev.png';
+	  	}
+	  	$('#header-principal img').attr("src", imag);
 	  	$('#header-principal h1').text(profileData.name);
 	  	$('#header-principal h2').text(profileData.profession);
 	  	$('.profile p').text(profileData.description);

@@ -51,58 +51,10 @@ body{
 	main,
 	header,
 	aside{
+		display: flex;
+		flex-flow: column wrap;
+		flex: 1 1 auto;
 		position: relative;
-	}
-	aside{
-		&#info-principal{
-			background: $cor-header;
-			color: $cor-bkg;
-			padding: 60px 0px;
-			.profile,
-			.contact,
-			.skill{
-				text-align: center;
-				width: 100%;
-				padding: 0 15%;
-				h2{
-					border-bottom: 1px solid $cor-bkg;
-					display: inline-flex;
-    				padding: 0px 20px 10px;
-				}
-				.address{
-					padding: 10px 0px 30px;
-					a{
-						color:$cor-bkg;
-						&:hover,
-						&:hover,
-						&:focus{
-							color:$cor-bkg;
-						}
-					}
-				}
-			}
-			.skill{
-				.bars{
-					background: transparent;
-					border: 1px solid $cor-bkg;
-					position: relative;
-					margin-bottom: 30px;
-					height: 25px;
-					width: 100%;
-					&::after {
-						background:  $cor-bkg;
-						content: '';
-						position: absolute;
-						left: 0; 
-						top: 0; 
-						bottom: 0;
-						transition: width 6s ease-in-out;
-						/*animation: loading 6s ease-in-out infinite;*/
-						width: 70%;
-					}
-				}
-			}
-		}
 	}
 	main{
 		height: 100%;
@@ -129,6 +81,8 @@ body{
 		width: 100%;
 		margin-right: auto;
 		margin-left: auto;
+		display: flex;
+		flex-flow: row wrap;
 		@include mobile{
 			max-width: 540px;
 		}
@@ -152,14 +106,14 @@ body{
 				width: 100%;
 				padding-right: 15px;
 				padding-left: 15px;
-				&.col-tb-40{
+				&.col-tb-30{
 					@include tablet{
 						-ms-flex: 0 0 30%;
 						flex: 0 0 30%;
 						max-width: 30%;
 					}
 				}
-				&.col-tb-60{
+				&.col-tb-70{
 					@include tablet{
 						-ms-flex: 0 0 70%;
 						flex: 0 0 70%;
