@@ -1,4 +1,11 @@
 header {
 	background: $cor-header;
 	color: $cor-bkg;
+	text-transform: uppercase;
+	&#header-principal{
+		h2{
+			font-weight: 400;
+			font-size:$font-peq;
+		}
+	}
 }
