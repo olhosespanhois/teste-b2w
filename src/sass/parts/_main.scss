@@ -57,30 +57,49 @@ body{
 		&#info-principal{
 			background: $cor-header;
 			color: $cor-bkg;
-		}
-		.profile,
-		.contact,
-		.skill{
-			text-align: center;
-			width: 100%;
-		}
-		.skill{
-			.bars{
-				background: transparent;
-				border: 1px solid $cor-bkg;
-				position: relative;
-				height: 25px;
+			padding: 60px 0px;
+			.profile,
+			.contact,
+			.skill{
+				text-align: center;
 				width: 100%;
-				&::after {
-					background:  $cor-bkg;
-					content: '';
-					position: absolute;
-					left: 0; 
-					top: 0; 
-					bottom: 0;
-					transition: width 6s ease-in-out;
-					/*animation: loading 6s ease-in-out infinite;*/
-					width: 70%;
+				padding: 0 15%;
+				h2{
+					border-bottom: 1px solid $cor-bkg;
+					display: inline-flex;
+    				padding: 0px 20px 10px;
+				}
+				.address{
+					padding: 10px 0px 30px;
+					a{
+						color:$cor-bkg;
+						&:hover,
+						&:hover,
+						&:focus{
+							color:$cor-bkg;
+						}
+					}
+				}
+			}
+			.skill{
+				.bars{
+					background: transparent;
+					border: 1px solid $cor-bkg;
+					position: relative;
+					margin-bottom: 30px;
+					height: 25px;
+					width: 100%;
+					&::after {
+						background:  $cor-bkg;
+						content: '';
+						position: absolute;
+						left: 0; 
+						top: 0; 
+						bottom: 0;
+						transition: width 6s ease-in-out;
+						/*animation: loading 6s ease-in-out infinite;*/
+						width: 70%;
+					}
 				}
 			}
 		}
@@ -110,15 +129,17 @@ body{
 		width: 100%;
 		margin-right: auto;
 		margin-left: auto;
-		position: relative;
-		display: grid;
-		grid-auto-flow: column;
+		@include mobile{
+			max-width: 540px;
+		}
+		@include tablet{
+			max-width: 720px;
+		}
 		@include tablet-landscase{
-			width: 100%;
+			max-width: 960px;
 		}
 		@include desktop{
-				width: 1200px;
-				max-width: 1200px;
+			max-width: 1200px;
 		}
 		.row {
 			display: -webkit-box;
@@ -128,21 +149,21 @@ body{
 			flex-wrap: wrap;
 			.col-100{
 				position: relative;
-			    width: 100%;
-			    padding-right: 15px;
-			    padding-left: 15px;
+				width: 100%;
+				padding-right: 15px;
+				padding-left: 15px;
 				&.col-tb-40{
 					@include tablet{
-						-ms-flex: 0 0 40%;
-    					flex: 0 0 40%;
-    					max-width: 40%;
+						-ms-flex: 0 0 30%;
+						flex: 0 0 30%;
+						max-width: 30%;
 					}
 				}
 				&.col-tb-60{
 					@include tablet{
-						-ms-flex: 0 0 60%;
-    					flex: 0 0 60%;
-    					max-width: 60%;
+						-ms-flex: 0 0 70%;
+						flex: 0 0 70%;
+						max-width: 70%;
 					}
 				}
 			}
@@ -151,6 +172,7 @@ body{
 			align-items: left;
 			min-height: 1px;
 			position: relative;
+			width: 100%;
 		}
 	}
 }
