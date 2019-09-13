@@ -24,10 +24,6 @@
 ::before {
     box-sizing: border-box;
 }
-@keyframes width {
-  from { width: 0 }
-  to { width: 100% }
-}
 @import 'functions/variables';
 @import 'functions/mixins'; 
 @import 'parts/header';

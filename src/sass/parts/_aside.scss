@@ -33,25 +33,23 @@ aside{
 				}
 		}
 		.skill{
-				.bars{
-					background: transparent;
-					border: 1px solid $cor-bkg;
-					position: relative;
-					margin-bottom: 30px;
-					height: 25px;
-					width: 100%;
-					&::after {
-						background:  $cor-bkg;
-						content: '';
-						position: absolute;
-						left: 0; 
-						top: 0; 
-						bottom: 0;
-						transition: width 6s ease-in-out;
-						/*animation: loading 6s ease-in-out infinite;*/
-						width: 70%;
-					}
+			.bars{
+				background: transparent;
+				border: 1px solid $cor-bkg;
+				position: relative;
+				margin-bottom: 30px;
+				height: 25px;
+				width: 100%;
+				&::after {
+					background:  $cor-bkg;
+					content: '';
+					position: absolute;
+					left: 0; 
+					top: 0; 
+					bottom: 0;
+					width: 0%;
 				}
+			}
 		}
 	}
 }
